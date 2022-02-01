@@ -1,15 +1,14 @@
 
-function main() {
+function main(input) {
     const myMessage = 'Gunner Rocks!';
-    let result = ''
+    var result = ''
     
-    for (let i = 0; i < myMessage.length; i += 1) {
-        const char = myMessage[i];
-
-        result += `char ${ } char`;
+    for (let i = 0; i < input.length; i ++) {
+        result += i % 2 == 0 ? input.charAt(i).toUpperCase() : input.charAt(i);
     }
-
-    console.log(result);
+    return result
 }
+    var test = 'gunner rocks';
+    console.log(main(test));
 
-main()
+
