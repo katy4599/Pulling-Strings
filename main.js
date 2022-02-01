@@ -1,14 +1,19 @@
 
-function main(input) {
-    const myMessage = 'Gunner Rocks!';
-    var result = ''
+function main() {
+    const myMessage = 'Gunner Rocks';
+    let result = '';
     
-    for (let i = 0; i < input.length; i ++) {
-        result += i % 2 == 0 ? input.charAt(i).toUpperCase() : input.charAt(i);
+    for (let i = 0; i < myMessage.length; i += 1) {
+        const char = myMessage[i];
+
+        if ((i % 2) == 0) {
+            result += char.toUpperCase();
+        } else {
+            result += char.toLowerCase();
+        }
     }
-    return result
+    console.log(result);
 }
-    var test = 'gunner rocks';
-    console.log(main(test));
+    main()
 
 
